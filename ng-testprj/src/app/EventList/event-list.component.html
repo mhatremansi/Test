@@ -1,2 +1,8 @@
 
-    <h1>Hello {{consts.name}}</h1>
+<div>
+<app-child *ngFor="let item of consts" [event]= "item" (output)="handleinParent($event)"></app-child> <!--Returning data from Child to Parent-->
+<!--<app-child #child></app-child>
+<p>{{child?.childVariable}}</p>
+<button type="button" class="btn btn-danger" (click)="child.display()">Danger2</button>-->
+</div>
+  

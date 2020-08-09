@@ -1,0 +1,10 @@
+<h1 [ngStyle]="checkAge()" > Hello {{event.name}}</h1>
+<h2 [ngClass]="{mansi: event.age <50}"  [ngSwitch]="event.age" >
+    <span *ngIf="event.age" > Age : {{event?.age}}</span>
+    <span *ngSwitchCase="40">(You are Young)</span>
+    <span *ngSwitchCase="101">(You are Old )</span>
+    <span *ngSwitchDefault>(You are  wild)</span>
+</h2>
+<p>child works!</p>
+<button type="button" class="btn btn-danger" (click)="handleClickMe()">Danger</button>
+
